@@ -1,4 +1,7 @@
-int x = -100;
+int xBall1 = 0;
+int yBall1 = 0;
+boolean xBall2 = true;
+boolean yBall2 = true;
 
 void setup()
 {
@@ -6,17 +9,25 @@ void setup()
 }
 void draw()
 {
-	if(mousePressed)
+	background(255);
+	fill(xBall1, 0, yBall1);
+	ellipse(xBall1, yBall1, 20, 20);
+	xBall1 += 5;
+	yBall1 += 5;
+	if (xBall2 = true)
 	{
-		//background(255, 255, 255);
-		//fill(255, 0, 0);
-		noStroke();
-		ellipse(mouseX, mouseY, 20, 20);
-		x += 5;
-		if(x > 500)
-		{
-			x = -100;
-		}
+		xBall1 += 5;
 	}
-	
+	if (xBall1 > 1000)
+	{
+		xBall2 = false;
+	}
+	if (!xBall2)
+	{
+		xBall1 -= 10;
+	}
+	if (xBall1 < 0)
+	{
+		xBall2 = true;
+	}
 }
