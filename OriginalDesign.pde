@@ -5,20 +5,18 @@ boolean yBall2 = true;
 
 void setup()
 {
-	size(1000,1000);
+	size(987,987);
 }
 void draw()
 {
 	background(255);
 	fill(xBall1, 0, yBall1);
 	ellipse(xBall1, yBall1, 20, 20);
-	xBall1 += 5;
-	yBall1 += 5;
-	if (xBall2 = true)
+	if (xBall2)
 	{
-		xBall1 += 5;
+		xBall1 += 10;
 	}
-	if (xBall1 > 1000)
+	if (xBall1 > 987)
 	{
 		xBall2 = false;
 	}
@@ -29,5 +27,21 @@ void draw()
 	if (xBall1 < 0)
 	{
 		xBall2 = true;
+	}
+	if (yBall2)
+	{
+		yBall1 += 3;
+	}
+	if (yBall1 > 987)
+	{
+		yBall2 = false;
+	}
+	if (!yBall2)
+	{
+		yBall1 -= 3;
+	}
+	if (yBall1 < 0)
+	{
+		yBall2 = true;
 	}
 }
