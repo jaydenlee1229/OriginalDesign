@@ -10,7 +10,7 @@ void setup()
 void draw()
 {
 	background(255);
-	fill(xBall1, 0, yBall1);
+	fill(xBall1, yBall1, xBall1);
 	ellipse(xBall1, yBall1, 20, 20);
 	if (xBall2)
 	{
