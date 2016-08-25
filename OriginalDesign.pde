@@ -6,15 +6,18 @@ boolean yBall2 = true;
 void setup()
 {
 	size(500,500);
+	background(255);
 }
-void draw()
+
+void brush()
 {
-	//background(255);
 	noStroke();
-	//fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
 	fill(mouseX, mouseY, 255);
-	//ellipse(xBall1, yBall1, (int)(Math.random()*50), (int)(Math.random()*50));
 	rect(xBall1, yBall1, 20, 20);
+}
+
+void bounce()
+{
 	if (xBall2)
 	{
 		xBall1 += 5;
@@ -48,4 +51,15 @@ void draw()
 		yBall2 = true;
 	}
 
+}
+
+void draw()
+{
+	brush();
+	bounce();
+}
+
+void mousePressed()
+{
+	background(255);
 }
